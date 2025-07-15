@@ -63,3 +63,13 @@ The saved value (loggedUser) contains data such as id, name, email and role. The
 ##  Roles: Admin vs User Users
 
 in this app can have a role field that defines their permissions: admin: You have full access. Can: Create new events. Edit and delete events from the list. customer: You have limited access. Can only: See the list of events, sign up for events and create events. You cannot edit, delete.
+
+
+---
+## How to run 
+
+Option #1: You must stop at the index.html file, then right click and click on the option (Open with live server)
+
+Option #2 (Recommended): You must enter the terminal and execute the command npm run dev, Following this, the terminal will create a local server, you must enter the server URL (e.g.: http://localhost:5173) and once you enter the project will be loaded.
+
+Option #3: Just like in step #2, you should open console (command ctrl + j) and execute the following command (json-server --watch db.json), the terminal will create a local server with the port (http://localhost:3000)
