@@ -50,11 +50,17 @@ function showLogin() {
 
 
 // ------------------ REGISTRO ------------------
+
+
+
 async function isUserOrEmailTaken(username, email) {
   const res = await fetch(`${API}/users?username=${username}`);
   const usersByUsername = await res.json();
-  const res2 = await fetch(`${API}/users?email=${email}`);
-  const usersByEmail = await res2.json();
+
+  const resAll = await fetch(`${API}/users`);
+  const allUsers = await resAll.json();
+  const usersByEmail = allUsers.filter(u => u.email === email);
+
   return usersByUsername.length > 0 || usersByEmail.length > 0;
 }
 
